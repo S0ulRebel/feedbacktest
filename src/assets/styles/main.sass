@@ -1,0 +1,66 @@
+// VARIABLES
+@import "variables"
+
+// MIXINS
+@import "mixins"
+
+// VIEWS
+@import './views/films'
+@import './views/filmDetails'
+
+// COMPONENTS
+@import './components/navigation'
+@import './components/filmItem'
+@import './components/characterItem'
+
+// GLOBAL STYLES
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap')
+
+*
+  font-family: "Open Sans"
+  margin: 0
+  padding: 0
+  line-height: 1
+  box-sizing: border-box
+  color: $text-color
+
+
+body
+  background-color: #f6f6f6
+
+.content
+  margin-top: 50px
+
+.row
+  align-items: stretch
+  display: flex
+  flex-direction: row
+
+a
+  text-decoration: none
+
+.button
+  background-color: $cta-color1
+  border-radius: $border-radius-small
+  color: white
+  display: block
+  height: 30px
+  text-align: center
+  text-decoration: none
+  padding: 6px 14px 6px 14px
+  width: 200px
+
+  &:hover
+    background-color: $cta-color2
+
+
+input
+  height: 30px
+  border: 1px solid $border-color
+  border-radius: $border-radius-small
+  padding: 5px 10px
+
+  &:focus,
+  &:hover
+    outline: none
+    border: 1px solid $cta-color1

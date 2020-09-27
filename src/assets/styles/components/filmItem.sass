@@ -1,0 +1,68 @@
+@import '../variables'
+
+.filmsItem
+  background-color: white
+  padding: 20px
+  margin: 0 20px
+  margin-top: 30px
+  max-width: 900px
+  overflow: hidden
+  @include box
+
+  &:last-child
+    margin-bottom: 30px
+
+  h1
+    margin: 10px 0 20px 0
+
+  .filmsItem__body
+    flex-wrap: nowrap
+    @media screen and (max-width: 700px)
+      flex-wrap: wrap
+
+    .filmsItem__thumbnail
+      flex-shrink: 0
+      height: 200px
+      margin-right: 20px
+      overflow: hidden
+      width: 200px
+      @media screen and (max-width: 700px)
+        width: 100%
+        height: auto
+        max-height: 400px
+
+      img
+        width: 100%
+        height: auto
+
+    .filmsItem__description
+      flex-shrink: 1
+      width: auto
+      max-width: 638px
+      padding: 20px
+      border: 1px solid $border-color
+      font-size: 16px
+      line-height: 20px
+
+  .filmsItem__meta
+    flex-wrap: wrap
+    margin: 20px 0
+
+    > div
+      border-left: 1px solid $border-color
+      padding: 0 20px
+      margin-top: 20px
+
+      &:last-child
+        border-right: 1px solid $border-color
+
+      div
+        color: $cta-color1
+        font-weight: bold
+        margin-bottom: 5px
+
+  .button
+    float: right
+    @media screen and (max-width: 600px)
+      float: none
+      margin: auto
